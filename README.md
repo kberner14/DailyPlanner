@@ -1,62 +1,11 @@
-# 05 Third-Party APIs: Work Day Scheduler
+    Daily Planner
+    
+I set out with a goal in mind of making a functioning daily planner that would break down what I was to be doing with my day hour by hour. The main idea being, the user could enter an activity or thought, have it saved, and return to it later. Some fun functionality was brought to it with the idea that it should be color coded based on the time of day.
 
-Create a simple calendar application that allows the user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+Depending on the time of day, gathered from moment, it could be displayed and highlighted which part of the day you currently are at, which parts had past, and which you had to look forward to. This was an interesting introduction to using outside APIs to gather current global information, process it in a meaningful way, and use its substance in responsive way in a webpage.
 
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+In addition to API work, this page uses local storage to log information and allows for them to return to see this later on. The information was pulled from local storage using JSON formatting, processed, and placed using class and id splitting. It was interesting using new organizational techinques for data and seems like it could be a powerful tool for dealing with larger objects moving forward.
 
-Starter html and css files are provided in the `./Develop` folder. You should familiarize yourself with the code in these files before proceeding to pseudo-code your approach for solving the problem.
+In the future, I plan to finish the overall functionality of this page, create a slightly more aesthetically pleasing layout, and, time permitting, add some mildly entertaining confirmation reactions for when entries occur.
 
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I am using a daily planner to create a schedule
-
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-
-WHEN I click into a timeblock
-THEN I can enter an event
-
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-
-WHEN I refresh the page
-THEN the saved events persist
-```
-
-The following animation demonstrates the application functionality:
-
-![day planner demo](./Assets/05-third-party-apis-homework-demo.gif)
-
-## Review
-
-You are required to submit the following for review:
-
-- The URL of the deployed application.
-
-- The URL of the GitHub repository.
-
-- Give the repository a unique name.
-- Include a **quality ** README describing the project. (Refer to [Good-README-Guide](../../01-HTML-Git-CSS/04-Supplemental/Good-README-Guide/README.md))
-
-## Video Demonstration
-
-[Panopto: Homework 5 Demo](https://codingbootcamp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ffff8e7d-473b-41cf-8e04-ab8001730780)
-
----
-
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+If I find myself being overly ambitious, I'd like to figure out how to create a way to have the time slots automatically reset themselves after every day, and after that figure out how to enter certain repeatable "daily habits" that don't reset every day.
