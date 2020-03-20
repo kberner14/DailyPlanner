@@ -13,10 +13,8 @@ var hoursData = {
 }
 
 var m = moment();
-// console.log(m.format("dddd, MMMM Do YYYY"));
-
-    // Let the day be the current date
-var todaysDate= document.getElementById("")
+var todaysDate= m.format("dddd, MMMM Do YYYY");
+    $("#currentDay").append(todaysDate)
 
     // let currentHour be the hour of the current time of day
 var currentHour = parseInt(moment().format("H"))
@@ -49,10 +47,12 @@ timeSlotElements.each(function () {
 });
 
 
+// Get local stored data
+// IF anything was found in local storage, update the daily calendar
+var storedPlans = JSON.parse(localStorage.getitem("time-block"))
 
-// The javascript here should contain the ability to have button clicks for each button
-    // The button clicks should prompt the user for input associated with the hour
-    // the inputs should be placed into local storage
-    // the hours of the day should be compared with the api time
-    // depending on the api time, the label of 
+//IF var !=== null { insert }
 
+// Render items to page
+// Clear item
+// WHEN input is entered
