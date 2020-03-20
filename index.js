@@ -12,44 +12,41 @@ var hoursData = {
     17: '',
 }
 
-// let currentHour be the hour of the current time of day
-var currentHour = parseInt(moment().format("H"))
+var m = moment();
+// console.log(m.format("dddd, MMMM Do YYYY"));
 
-// Get reference to all the hours
-var timeBlockElements = $(".time-block")
+    // Let the day be the current date
+var todaysDate= document.getElementById("")
+
+    // let currentHour be the hour of the current time of day
+var currentHour = parseInt(moment().format("H"))
+// console.log(currentHour)
+
+    // Get reference to all the hours
+var timeSlotElements = $(".time-block")
 
 // For each hour
-timeBlockElements.each(function () {
+timeSlotElements.each(function () {
+    // Need hour of the block
+    // console.log(this)
+    var timeSlotHour = parseInt(this.id.split("-")[1]);
+    console.log(timeSlotHour, currentHour)
+    
+    // If the hour is less than currentHour
+    if (timeSlotHour < currentHour) {
 
-    var timeBlockHour = parseInt(this.id.split("-")[1]);
-    console.log(timeBlockHour, currentHour)
-})
-
-// Get the hour of the block
-if (timeBlockHour < currentHour {
     // give past class to the hour
-    $(this).addClass("past")
+        $(this).addClass("past");
 
     //get matching hour in hoursData
-} 
-
-else if (timeBlockHour === currentHour {
+    } else if (timeSlotHour === currentHour) {
     // give present class to the hour
-    $(this).addClass("present")
-} 
-
-else {
+        $(this).addClass("present");
+    } else {
     // give future class to the hour
-    $(this).addClass("future")
-}
-// If the hour is less than currentHour
-    // give past class to hour
-
-// else if the hour is equal to the currenHour
-    // give present class to the hour
-
-// else
-    // give the future class to the hour
+        $(this).addClass("future");
+    }
+});
 
 
 
